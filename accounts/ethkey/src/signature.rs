@@ -59,9 +59,16 @@ impl Signature {
 			return Signature::default();
 		}
 
+		let original_v = match data[64] {
+			27 => 0,
+			28 => 1,
+		    v if v >= 35 => ((v - 1) % 2) as u8,
+			_ => 4
+		};
+
 		let mut sig = [0u8; 65];
 		sig.copy_from_slice(data);
-		sig[64] -= 27;
+		sig[64] = original_v;
 		Signature(sig)
 	}
 
