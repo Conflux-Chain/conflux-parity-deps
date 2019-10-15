@@ -19,7 +19,7 @@
 //! Dir utilities for platform-specific operations
 extern crate app_dirs;
 extern crate ethereum_types;
-extern crate journaldb;
+// extern crate journaldb;
 extern crate home;
 
 pub mod helpers;
