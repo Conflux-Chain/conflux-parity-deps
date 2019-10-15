@@ -19,14 +19,14 @@
 //! Dir utilities for platform-specific operations
 extern crate app_dirs;
 extern crate ethereum_types;
-extern crate journaldb;
+// extern crate journaldb;
 extern crate home;
 
 pub mod helpers;
 use std::fs;
 use std::path::{PathBuf, Path};
 use ethereum_types::{H64, H256};
-use journaldb::Algorithm;
+// use journaldb::Algorithm;
 use helpers::{replace_home, replace_home_and_local};
 use app_dirs::{AppInfo, get_app_root, AppDataType};
 // re-export platform-specific functions
@@ -171,9 +171,9 @@ impl DatabaseDirectories {
 	}
 
 	/// Generic client path
-	pub fn client_path(&self, pruning: Algorithm) -> PathBuf {
-		self.db_root_path().join(pruning.as_internal_name_str()).join("db")
-	}
+	// pub fn client_path(&self, pruning: Algorithm) -> PathBuf {
+	// 	self.db_root_path().join(pruning.as_internal_name_str()).join("db")
+	// }
 
 	/// DB root path, named after genesis hash
 	pub fn db_root_path(&self) -> PathBuf {
@@ -182,15 +182,15 @@ impl DatabaseDirectories {
 	}
 
 	/// DB path
-	pub fn db_path(&self, pruning: Algorithm) -> PathBuf {
-		self.db_root_path().join(pruning.as_internal_name_str())
-	}
+	// pub fn db_path(&self, pruning: Algorithm) -> PathBuf {
+	// 	self.db_root_path().join(pruning.as_internal_name_str())
+	// }
 
 	/// Get the root path for database
 	// TODO: remove in 1.7
-	pub fn legacy_version_path(&self, pruning: Algorithm) -> PathBuf {
-		self.legacy_fork_path().join(format!("v{}-sec-{}", LEGACY_CLIENT_DB_VER_STR, pruning.as_internal_name_str()))
-	}
+	// pub fn legacy_version_path(&self, pruning: Algorithm) -> PathBuf {
+	// 	self.legacy_fork_path().join(format!("v{}-sec-{}", LEGACY_CLIENT_DB_VER_STR, pruning.as_internal_name_str()))
+	// }
 
 	/// Get user defaults path, legacy way
 	// TODO: remove in 1.7
