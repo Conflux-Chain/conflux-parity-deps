@@ -5,7 +5,7 @@ authors = ["Parity Technologies <admin@parity.io>"]
 license = "GPL3"
 
 [dependencies]
-ethereum-types = "0.8"
+ethereum-types = "0.15.1"
 # journaldb = { path = "../journaldb" }
 app_dirs = "1.2.1"
 home = "0.3"
