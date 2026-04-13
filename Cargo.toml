@@ -1,5 +1,6 @@
 [workspace]
 members = [
 	"accounts/ethkey",
-	"util/dir"
+	"util/dir",
+	"util/wordlist",
 ]
