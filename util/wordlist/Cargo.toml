@@ -1,0 +1,12 @@
+[package]
+name = "parity-wordlist"
+version = "1.4.0"
+description = "Word list used to generate brain wallets for Parity / Conflux."
+license = "GPL-3.0"
+authors = ["Parity Technologies <admin@parity.io>", "Conflux Foundation"]
+repository = "https://github.com/Conflux-Chain/conflux-parity-deps"
+edition = "2021"
+
+[dependencies]
+lazy_static = "1.5"
+rand = "0.9"
